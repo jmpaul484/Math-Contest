@@ -34,6 +34,7 @@ namespace Math_Contest
             AddButton.Checked = true;
 
             NameTextBox.Select();
+
         }
         // Evaluate the fields and return true if valid, false otherwise
         bool EvaluateFields()
@@ -111,6 +112,7 @@ namespace Math_Contest
         {
             //Reset for to defaults when clicked
             Defaults();
+            RandomNumbers();
         }
 
         private void SummeryButton_Click(object sender, EventArgs e)
