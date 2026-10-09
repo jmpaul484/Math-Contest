@@ -1,3 +1,7 @@
+//Jonathan Paul
+//RCET 2265
+//Fall 2026
+//https://github.com/jmpaul484/Math-Contest.git
 using System;
 using System.Diagnostics.Eventing.Reader;
 using System.Reflection.Metadata.Ecma335;
