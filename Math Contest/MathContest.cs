@@ -33,6 +33,8 @@ namespace Math_Contest
             GradeTextBox.Text = string.Empty;
 
             AddButton.Checked = true;
+            Number1TextBox.Enabled = false;
+            Number2TextBox.Enabled = false;
 
             NameTextBox.Select();
 
