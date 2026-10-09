@@ -155,6 +155,7 @@
             SubtractButton.TabStop = true;
             SubtractButton.Text = "subtract";
             SubtractButton.UseVisualStyleBackColor = true;
+            SubtractButton.CheckedChanged += SubtractButton_CheckedChanged;
             // 
             // MultiplyButton
             // 
@@ -166,6 +167,7 @@
             MultiplyButton.TabStop = true;
             MultiplyButton.Text = "Multiply";
             MultiplyButton.UseVisualStyleBackColor = true;
+            MultiplyButton.CheckedChanged += MultiplyButton_CheckedChanged;
             // 
             // DivideButton
             // 
@@ -177,6 +179,7 @@
             DivideButton.TabStop = true;
             DivideButton.Text = "Divide";
             DivideButton.UseVisualStyleBackColor = true;
+            DivideButton.CheckedChanged += DivideButton_CheckedChanged;
             // 
             // StudentInfoGroupBox
             // 

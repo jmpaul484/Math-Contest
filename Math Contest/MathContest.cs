@@ -6,19 +6,20 @@ namespace Math_Contest
 {
     public partial class MathContest : Form
     {
+        private void MathContest_Load(object? sender, EventArgs e)
+        {
+            // Form load logic (left empty intentionally)
+        }
+
         public MathContest()
         {
             InitializeComponent();
             Defaults();
             EvaluateFields();
+            RandomNumbers();
 
         }
         static string userMessage = string.Empty;
-
-        private void MathContest_Load(object? sender, EventArgs e)
-        {
-            // Form load logic (left empty intentionally)
-        }
 
         void Defaults()
         {
@@ -49,7 +50,6 @@ namespace Math_Contest
                 valid = false;
                 //AgeTextBox.Select();
                 AgeTextBox.BackColor = Color.LightYellow;
-                userMessage += "Age must be a whole number\n";
             }
 
             if (NameTextBox.Text == "")
@@ -57,7 +57,6 @@ namespace Math_Contest
                 valid = false;
                 //NameTextBox.Select();
                 NameTextBox.BackColor = Color.LightYellow;
-                userMessage += "Name is required\n";
             }
             else
             {
@@ -74,7 +73,6 @@ namespace Math_Contest
                 valid = false;
                 //GradeTextBox.Select();
                 GradeTextBox.BackColor = Color.LightYellow;
-                userMessage += "Grade must be a whole number\n";
             }
 
             try
@@ -87,12 +85,17 @@ namespace Math_Contest
                 valid = false;
                 //StudentAnswerTextBox.Select();
                 StudentAnswerTextBox.BackColor = Color.LightYellow;
-                userMessage += "Student answer must be a whole number\n";
                 SubmitButton.Enabled = valid;
             }
             return valid;
         }
 
+        void RandomNumbers()
+        {
+            Random rand = new Random();
+            Number1TextBox.Text = rand.Next(1, 100).ToString();
+            Number2TextBox.Text = rand.Next(1, 100).ToString();
+        }
         private void ExitButton_Click(object? sender, EventArgs e)
         {
             // Close the form when Exit is clicked
@@ -113,11 +116,6 @@ namespace Math_Contest
         private void SummeryButton_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void AddButton_CheckedChanged(object sender, EventArgs e)
-        {
-            // Handle Add button checked
         }
 
         //Evaluate fields when the AgeTextBox text changes
@@ -142,6 +140,28 @@ namespace Math_Contest
         {
             EvaluateFields();
         }
+        private void AddButton_CheckedChanged(object sender, EventArgs e)
+        {
+            RandomNumbers();
+            // Handle Add button checked
+        }
 
+        private void SubtractButton_CheckedChanged(object sender, EventArgs e)
+        {
+            RandomNumbers();
+            // Handle Subtract button checked
+        }
+
+        private void MultiplyButton_CheckedChanged(object sender, EventArgs e)
+        {
+            RandomNumbers();
+            // Handle Multiply button checked
+        }
+
+        private void DivideButton_CheckedChanged(object sender, EventArgs e)
+        {
+            RandomNumbers();
+            // Handle Divide button checked
+        }
     }
 }
