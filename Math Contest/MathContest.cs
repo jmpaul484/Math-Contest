@@ -10,6 +10,7 @@ namespace Math_Contest
         {
             // Form load logic (left empty intentionally)
         }
+        static string UserMessage = string.Empty;
 
         public MathContest()
         {
@@ -19,7 +20,7 @@ namespace Math_Contest
             RandomNumbers();
 
         }
-        static string userMessage = string.Empty;
+        int NumberTotal = 0;
 
         void Defaults()
         {
@@ -40,6 +41,7 @@ namespace Math_Contest
         bool EvaluateFields()
         {
             bool valid = true;
+            
 
             try
             {
@@ -86,8 +88,9 @@ namespace Math_Contest
                 valid = false;
                 //StudentAnswerTextBox.Select();
                 StudentAnswerTextBox.BackColor = Color.LightYellow;
-                SubmitButton.Enabled = valid;
             }
+            
+            SubmitButton.Enabled = valid;
             return valid;
         }
 
@@ -106,6 +109,31 @@ namespace Math_Contest
         private void SubmitButton_Click(object? sender, EventArgs e)
         {
             // Handle submit click
+            if (AddButton.Checked)
+            {
+                NumberTotal = int.Parse(Number1TextBox.Text) + int.Parse(Number2TextBox.Text);
+            }
+            else if (SubtractButton.Checked)
+            {
+                NumberTotal = int.Parse(Number1TextBox.Text) - int.Parse(Number2TextBox.Text);
+            }
+            else if (MultiplyButton.Checked)
+            {
+                NumberTotal = int.Parse(Number1TextBox.Text) * int.Parse(Number2TextBox.Text);
+            }
+            else if (DivideButton.Checked)
+            {
+                NumberTotal = int.Parse(Number1TextBox.Text) / int.Parse(Number2TextBox.Text);
+            }
+            if (NumberTotal == int.Parse(StudentAnswerTextBox.Text))
+            {
+                UserMessage = "Congratulations! Your answer is correct.";
+            }
+            else
+            {
+                UserMessage = $"Sorry, your answer is incorrect. The correct answer is {NumberTotal}.";
+            }
+            MessageBox.Show(UserMessage);
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
