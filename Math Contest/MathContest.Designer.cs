@@ -63,7 +63,7 @@
             SubmitButton.Location = new Point(6, 30);
             SubmitButton.Name = "SubmitButton";
             SubmitButton.Size = new Size(214, 63);
-            SubmitButton.TabIndex = 1;
+            SubmitButton.TabIndex = 5;
             SubmitButton.Text = "Submit";
             SubmitButton.UseVisualStyleBackColor = true;
             SubmitButton.Click += SubmitButton_Click;
@@ -73,7 +73,7 @@
             ClearButton.Location = new Point(6, 99);
             ClearButton.Name = "ClearButton";
             ClearButton.Size = new Size(214, 63);
-            ClearButton.TabIndex = 2;
+            ClearButton.TabIndex = 6;
             ClearButton.Text = "Clear";
             ClearButton.UseVisualStyleBackColor = true;
             ClearButton.Click += ClearButton_Click;
@@ -83,7 +83,7 @@
             SummeryButton.Location = new Point(6, 168);
             SummeryButton.Name = "SummeryButton";
             SummeryButton.Size = new Size(214, 63);
-            SummeryButton.TabIndex = 3;
+            SummeryButton.TabIndex = 7;
             SummeryButton.Text = "Summery";
             SummeryButton.UseVisualStyleBackColor = true;
             SummeryButton.Click += SummeryButton_Click;
@@ -93,7 +93,7 @@
             NameTextBox.Location = new Point(6, 85);
             NameTextBox.Name = "NameTextBox";
             NameTextBox.Size = new Size(268, 31);
-            NameTextBox.TabIndex = 4;
+            NameTextBox.TabIndex = 1;
             NameTextBox.TextChanged += NameTextBox_TextChanged;
             // 
             // Number2TextBox
@@ -102,20 +102,22 @@
             Number2TextBox.Name = "Number2TextBox";
             Number2TextBox.Size = new Size(293, 31);
             Number2TextBox.TabIndex = 5;
+            Number2TextBox.TabStop = false;
             // 
             // Number1TextBox
             // 
             Number1TextBox.Location = new Point(6, 69);
             Number1TextBox.Name = "Number1TextBox";
             Number1TextBox.Size = new Size(287, 31);
-            Number1TextBox.TabIndex = 7;
+            Number1TextBox.TabIndex = 4;
+            Number1TextBox.TabStop = false;
             // 
             // StudentAnswerTextBox
             // 
             StudentAnswerTextBox.Location = new Point(0, 199);
             StudentAnswerTextBox.Name = "StudentAnswerTextBox";
             StudentAnswerTextBox.Size = new Size(293, 31);
-            StudentAnswerTextBox.TabIndex = 8;
+            StudentAnswerTextBox.TabIndex = 4;
             StudentAnswerTextBox.TextChanged += StudentAnswerTextBox_TextChanged;
             // 
             // AgeTextBox
@@ -123,7 +125,7 @@
             AgeTextBox.Location = new Point(302, 85);
             AgeTextBox.Name = "AgeTextBox";
             AgeTextBox.Size = new Size(39, 31);
-            AgeTextBox.TabIndex = 9;
+            AgeTextBox.TabIndex = 2;
             AgeTextBox.TextChanged += AgeTextBox_TextChanged;
             // 
             // GradeTextBox
@@ -131,7 +133,7 @@
             GradeTextBox.Location = new Point(403, 85);
             GradeTextBox.Name = "GradeTextBox";
             GradeTextBox.Size = new Size(39, 31);
-            GradeTextBox.TabIndex = 10;
+            GradeTextBox.TabIndex = 3;
             GradeTextBox.TextChanged += GradeTextBox_TextChanged;
             // 
             // AddButton
@@ -141,7 +143,6 @@
             AddButton.Name = "AddButton";
             AddButton.Size = new Size(71, 29);
             AddButton.TabIndex = 11;
-            AddButton.TabStop = true;
             AddButton.Text = "Add";
             AddButton.UseVisualStyleBackColor = true;
             // 
@@ -152,7 +153,6 @@
             SubtractButton.Name = "SubtractButton";
             SubtractButton.Size = new Size(101, 29);
             SubtractButton.TabIndex = 12;
-            SubtractButton.TabStop = true;
             SubtractButton.Text = "subtract";
             SubtractButton.UseVisualStyleBackColor = true;
             SubtractButton.CheckedChanged += SubtractButton_CheckedChanged;
@@ -164,7 +164,6 @@
             MultiplyButton.Name = "MultiplyButton";
             MultiplyButton.Size = new Size(101, 29);
             MultiplyButton.TabIndex = 13;
-            MultiplyButton.TabStop = true;
             MultiplyButton.Text = "Multiply";
             MultiplyButton.UseVisualStyleBackColor = true;
             MultiplyButton.CheckedChanged += MultiplyButton_CheckedChanged;
@@ -176,7 +175,6 @@
             DivideButton.Name = "DivideButton";
             DivideButton.Size = new Size(87, 29);
             DivideButton.TabIndex = 14;
-            DivideButton.TabStop = true;
             DivideButton.Text = "Divide";
             DivideButton.UseVisualStyleBackColor = true;
             DivideButton.CheckedChanged += DivideButton_CheckedChanged;
@@ -192,7 +190,7 @@
             StudentInfoGroupBox.Location = new Point(12, 12);
             StudentInfoGroupBox.Name = "StudentInfoGroupBox";
             StudentInfoGroupBox.Size = new Size(551, 132);
-            StudentInfoGroupBox.TabIndex = 15;
+            StudentInfoGroupBox.TabIndex = 1;
             StudentInfoGroupBox.TabStop = false;
             StudentInfoGroupBox.Text = "Student Information";
             // 
@@ -232,7 +230,7 @@
             ButtonGroupBox.Location = new Point(569, 12);
             ButtonGroupBox.Name = "ButtonGroupBox";
             ButtonGroupBox.Size = new Size(229, 426);
-            ButtonGroupBox.TabIndex = 16;
+            ButtonGroupBox.TabIndex = 3;
             ButtonGroupBox.TabStop = false;
             // 
             // ExitButton
@@ -240,7 +238,7 @@
             ExitButton.Location = new Point(6, 236);
             ExitButton.Name = "ExitButton";
             ExitButton.Size = new Size(214, 63);
-            ExitButton.TabIndex = 4;
+            ExitButton.TabIndex = 8;
             ExitButton.Text = "Exit";
             ExitButton.UseVisualStyleBackColor = true;
             ExitButton.Click += ExitButton_Click;
@@ -254,7 +252,7 @@
             MathProblemTypeGroup.Location = new Point(317, 158);
             MathProblemTypeGroup.Name = "MathProblemTypeGroup";
             MathProblemTypeGroup.Size = new Size(246, 280);
-            MathProblemTypeGroup.TabIndex = 17;
+            MathProblemTypeGroup.TabIndex = 20;
             MathProblemTypeGroup.TabStop = false;
             MathProblemTypeGroup.Text = "Math Problem Type";
             // 
@@ -269,7 +267,7 @@
             CurrentMathProblemGroup.Location = new Point(12, 158);
             CurrentMathProblemGroup.Name = "CurrentMathProblemGroup";
             CurrentMathProblemGroup.Size = new Size(299, 291);
-            CurrentMathProblemGroup.TabIndex = 18;
+            CurrentMathProblemGroup.TabIndex = 2;
             CurrentMathProblemGroup.TabStop = false;
             CurrentMathProblemGroup.Text = "Current Math Problem";
             // 
