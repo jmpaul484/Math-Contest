@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.Eventing.Reader;
 using System.Reflection.Metadata.Ecma335;
 using System.Windows.Forms;
 
@@ -43,24 +44,31 @@ namespace Math_Contest
         bool EvaluateFields()
         {
             bool valid = true;
-            
 
-            try
-            {
-                int.Parse(AgeTextBox.Text);
-                AgeTextBox.BackColor = Color.White;
+            // Check if AgeTextBox contains a valid age (7-11)
+            if (AgeTextBox.Text == "7" || AgeTextBox.Text == "8" || AgeTextBox.Text == "9" || AgeTextBox.Text == "10" || AgeTextBox.Text == "11")
+             {
+                try
+                {
+
+                    int.Parse(AgeTextBox.Text);
+                    AgeTextBox.BackColor = Color.White;
+                }
+                catch (Exception)
+                {
+                    valid = false;
+                    AgeTextBox.BackColor = Color.LightYellow;
+                }
             }
-            catch (Exception)
+             else
             {
                 valid = false;
-                //AgeTextBox.Select();
                 AgeTextBox.BackColor = Color.LightYellow;
             }
 
             if (NameTextBox.Text == "")
             {
                 valid = false;
-                //NameTextBox.Select();
                 NameTextBox.BackColor = Color.LightYellow;
             }
             else
@@ -68,15 +76,22 @@ namespace Math_Contest
                 NameTextBox.BackColor = Color.White;
             }
 
-            try
+            if (GradeTextBox.Text == "1" || GradeTextBox.Text == "2" || GradeTextBox.Text == "3" || GradeTextBox.Text == "4")
             {
-                int.Parse(GradeTextBox.Text);
-                GradeTextBox.BackColor = Color.White;
+                try
+                {
+                    int.Parse(GradeTextBox.Text);
+                    GradeTextBox.BackColor = Color.White;
+                }
+                catch (Exception)
+                {
+                    valid = false;
+                    GradeTextBox.BackColor = Color.LightYellow;
+                }
             }
-            catch (Exception)
+            else
             {
                 valid = false;
-                //GradeTextBox.Select();
                 GradeTextBox.BackColor = Color.LightYellow;
             }
 
@@ -88,7 +103,6 @@ namespace Math_Contest
             catch (Exception)
             {
                 valid = false;
-                //StudentAnswerTextBox.Select();
                 StudentAnswerTextBox.BackColor = Color.LightYellow;
             }
             
