@@ -22,6 +22,8 @@ namespace Math_Contest
 
         }
         int NumberTotal = 0;
+        int AnswerWrong = 0;
+        int AnswerRight = 0;
 
         void Defaults()
         {
@@ -36,8 +38,12 @@ namespace Math_Contest
             AddButton.Checked = true;
             Number1TextBox.Enabled = false;
             Number2TextBox.Enabled = false;
+            SummeryButton.Enabled = false;
 
             NameTextBox.Select();
+
+            AnswerRight = 0;
+            AnswerWrong = 0;
 
         }
         // Evaluate the fields and return true if valid, false otherwise
@@ -144,12 +150,15 @@ namespace Math_Contest
             if (NumberTotal == int.Parse(StudentAnswerTextBox.Text))
             {
                 UserMessage = "Congratulations! Your answer is correct.";
+                AnswerRight++;
             }
             else
             {
                 UserMessage = $"Sorry, your answer is incorrect. The correct answer is {NumberTotal}.";
+                AnswerWrong++;
             }
             MessageBox.Show(UserMessage, "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            SummeryButton.Enabled = true;
             RandomNumbers();
         }
         
@@ -162,7 +171,10 @@ namespace Math_Contest
 
         private void SummeryButton_Click(object sender, EventArgs e)
         {
-
+            UserMessage = $"Contestant Name: {NameTextBox.Text}\nTotal Questions: " +
+                $"{AnswerRight + AnswerWrong}\nCorrect Answers: {AnswerRight}\nIncorrect Answers: {AnswerWrong}" +
+                $"\nGrade: {(double)AnswerRight / (AnswerRight + AnswerWrong) * 100:F2}%";
+            MessageBox.Show(UserMessage, "Summary", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //Evaluate fields when the AgeTextBox text changes
