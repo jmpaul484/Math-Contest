@@ -149,9 +149,10 @@ namespace Math_Contest
             {
                 UserMessage = $"Sorry, your answer is incorrect. The correct answer is {NumberTotal}.";
             }
-            MessageBox.Show(UserMessage);
+            MessageBox.Show(UserMessage, "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            RandomNumbers();
         }
-
+        
         private void ClearButton_Click(object sender, EventArgs e)
         {
             //Reset for to defaults when clicked
