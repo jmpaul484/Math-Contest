@@ -44,8 +44,14 @@ namespace Math_Contest
 
             AnswerRight = 0;
             AnswerWrong = 0;
-
         }
+        void InfoChanged()
+        {
+            // Reset the answer counts and disable the summary button when info changes
+            AnswerRight = 0;
+            AnswerWrong = 0;
+            SummeryButton.Enabled = false;
+        }   
         // Evaluate the fields and return true if valid, false otherwise
         bool EvaluateFields()
         {
@@ -181,18 +187,21 @@ namespace Math_Contest
         private void NameTextBox_TextChanged(object sender, EventArgs e)
         {
             EvaluateFields();
+            InfoChanged();
         }
 
         //Evaluate fields when the AgeTextBox text changes
         private void AgeTextBox_TextChanged(object sender, EventArgs e)
         {
             EvaluateFields();
+            InfoChanged();
         }
 
         //Evaluate fields when the GradeTextBox text changes
         private void GradeTextBox_TextChanged(object sender, EventArgs e)
         {
             EvaluateFields();
+            InfoChanged();
         }
 
         private void StudentAnswerTextBox_TextChanged(object sender, EventArgs e)
