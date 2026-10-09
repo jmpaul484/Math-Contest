@@ -31,12 +31,12 @@
             SubmitButton = new Button();
             ClearButton = new Button();
             SummeryButton = new Button();
-            NametextBox = new TextBox();
-            Number2textBox = new TextBox();
-            Number1textBox = new TextBox();
-            StudentAnswertextBox = new TextBox();
-            AgetextBox = new TextBox();
-            GradetextBox = new TextBox();
+            NameTextBox = new TextBox();
+            Number2TextBox = new TextBox();
+            Number1TextBox = new TextBox();
+            StudentAnswerTextBox = new TextBox();
+            AgeTextBox = new TextBox();
+            GradeTextBox = new TextBox();
             AddButton = new RadioButton();
             SubtractButton = new RadioButton();
             MultiplyButton = new RadioButton();
@@ -66,7 +66,7 @@
             SubmitButton.TabIndex = 1;
             SubmitButton.Text = "Submit";
             SubmitButton.UseVisualStyleBackColor = true;
-            SubmitButton.Click += this.SubmitButton_Click;
+            SubmitButton.Click += SubmitButton_Click;
             // 
             // ClearButton
             // 
@@ -76,6 +76,7 @@
             ClearButton.TabIndex = 2;
             ClearButton.Text = "Clear";
             ClearButton.UseVisualStyleBackColor = true;
+            ClearButton.Click += ClearButton_Click;
             // 
             // SummeryButton
             // 
@@ -85,48 +86,49 @@
             SummeryButton.TabIndex = 3;
             SummeryButton.Text = "Summery";
             SummeryButton.UseVisualStyleBackColor = true;
+            SummeryButton.Click += SummeryButton_Click;
             // 
-            // NametextBox
+            // NameTextBox
             // 
-            NametextBox.Location = new Point(6, 85);
-            NametextBox.Name = "NametextBox";
-            NametextBox.Size = new Size(268, 31);
-            NametextBox.TabIndex = 4;
+            NameTextBox.Location = new Point(6, 85);
+            NameTextBox.Name = "NameTextBox";
+            NameTextBox.Size = new Size(268, 31);
+            NameTextBox.TabIndex = 4;
             // 
-            // Number2textBox
+            // Number2TextBox
             // 
-            Number2textBox.Location = new Point(6, 137);
-            Number2textBox.Name = "Number2textBox";
-            Number2textBox.Size = new Size(293, 31);
-            Number2textBox.TabIndex = 5;
+            Number2TextBox.Location = new Point(6, 137);
+            Number2TextBox.Name = "Number2TextBox";
+            Number2TextBox.Size = new Size(293, 31);
+            Number2TextBox.TabIndex = 5;
             // 
-            // Number1textBox
+            // Number1TextBox
             // 
-            Number1textBox.Location = new Point(6, 69);
-            Number1textBox.Name = "Number1textBox";
-            Number1textBox.Size = new Size(287, 31);
-            Number1textBox.TabIndex = 7;
+            Number1TextBox.Location = new Point(6, 69);
+            Number1TextBox.Name = "Number1TextBox";
+            Number1TextBox.Size = new Size(287, 31);
+            Number1TextBox.TabIndex = 7;
             // 
-            // StudentAnswertextBox
+            // StudentAnswerTextBox
             // 
-            StudentAnswertextBox.Location = new Point(0, 199);
-            StudentAnswertextBox.Name = "StudentAnswertextBox";
-            StudentAnswertextBox.Size = new Size(293, 31);
-            StudentAnswertextBox.TabIndex = 8;
+            StudentAnswerTextBox.Location = new Point(0, 199);
+            StudentAnswerTextBox.Name = "StudentAnswerTextBox";
+            StudentAnswerTextBox.Size = new Size(293, 31);
+            StudentAnswerTextBox.TabIndex = 8;
             // 
-            // AgetextBox
+            // AgeTextBox
             // 
-            AgetextBox.Location = new Point(302, 85);
-            AgetextBox.Name = "AgetextBox";
-            AgetextBox.Size = new Size(39, 31);
-            AgetextBox.TabIndex = 9;
+            AgeTextBox.Location = new Point(302, 85);
+            AgeTextBox.Name = "AgeTextBox";
+            AgeTextBox.Size = new Size(39, 31);
+            AgeTextBox.TabIndex = 9;
             // 
-            // GradetextBox
+            // GradeTextBox
             // 
-            GradetextBox.Location = new Point(403, 85);
-            GradetextBox.Name = "GradetextBox";
-            GradetextBox.Size = new Size(39, 31);
-            GradetextBox.TabIndex = 10;
+            GradeTextBox.Location = new Point(403, 85);
+            GradeTextBox.Name = "GradeTextBox";
+            GradeTextBox.Size = new Size(39, 31);
+            GradeTextBox.TabIndex = 10;
             // 
             // AddButton
             // 
@@ -177,9 +179,9 @@
             StudentInfoGroupBox.Controls.Add(GradeLabel);
             StudentInfoGroupBox.Controls.Add(AgeLabel);
             StudentInfoGroupBox.Controls.Add(NameLabel);
-            StudentInfoGroupBox.Controls.Add(GradetextBox);
-            StudentInfoGroupBox.Controls.Add(AgetextBox);
-            StudentInfoGroupBox.Controls.Add(NametextBox);
+            StudentInfoGroupBox.Controls.Add(GradeTextBox);
+            StudentInfoGroupBox.Controls.Add(AgeTextBox);
+            StudentInfoGroupBox.Controls.Add(NameTextBox);
             StudentInfoGroupBox.Location = new Point(12, 12);
             StudentInfoGroupBox.Name = "StudentInfoGroupBox";
             StudentInfoGroupBox.Size = new Size(551, 132);
@@ -234,7 +236,7 @@
             ExitButton.TabIndex = 4;
             ExitButton.Text = "Exit";
             ExitButton.UseVisualStyleBackColor = true;
-            ExitButton.Click += this.ExitButton_Click;
+            ExitButton.Click += ExitButton_Click;
             // 
             // MathProblemTypeGroup
             // 
@@ -254,9 +256,9 @@
             CurrentMathProblemGroup.Controls.Add(StudentAnswerLabel);
             CurrentMathProblemGroup.Controls.Add(Number2Label);
             CurrentMathProblemGroup.Controls.Add(Number1Label);
-            CurrentMathProblemGroup.Controls.Add(Number1textBox);
-            CurrentMathProblemGroup.Controls.Add(Number2textBox);
-            CurrentMathProblemGroup.Controls.Add(StudentAnswertextBox);
+            CurrentMathProblemGroup.Controls.Add(Number1TextBox);
+            CurrentMathProblemGroup.Controls.Add(Number2TextBox);
+            CurrentMathProblemGroup.Controls.Add(StudentAnswerTextBox);
             CurrentMathProblemGroup.Location = new Point(12, 158);
             CurrentMathProblemGroup.Name = "CurrentMathProblemGroup";
             CurrentMathProblemGroup.Size = new Size(299, 291);
@@ -302,7 +304,7 @@
             Controls.Add(StudentInfoGroupBox);
             Name = "MathContest";
             Text = "Math Contest";
-            Load += this.MathContest_Load;
+            Load += MathContest_Load;
             StudentInfoGroupBox.ResumeLayout(false);
             StudentInfoGroupBox.PerformLayout();
             ButtonGroupBox.ResumeLayout(false);
@@ -317,12 +319,12 @@
         private Button SubmitButton;
         private Button ClearButton;
         private Button SummeryButton;
-        private TextBox NametextBox;
-        private TextBox Number2textBox;
-        private TextBox Number1textBox;
-        private TextBox StudentAnswertextBox;
-        private TextBox AgetextBox;
-        private TextBox GradetextBox;
+        private TextBox NameTextBox;
+        private TextBox Number2TextBox;
+        private TextBox Number1TextBox;
+        private TextBox StudentAnswerTextBox;
+        private TextBox AgeTextBox;
+        private TextBox GradeTextBox;
         private RadioButton AddButton;
         private RadioButton SubtractButton;
         private RadioButton MultiplyButton;
